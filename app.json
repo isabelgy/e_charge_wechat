@@ -1,7 +1,9 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/stations/index/index",
+    "pages/stations/show/show",
+    "pages/stations/new/new",
+    "pages/stations/edit/edit"
   ],
   "window":{
     "backgroundTextStyle":"light",
