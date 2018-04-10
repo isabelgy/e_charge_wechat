@@ -1,21 +1,39 @@
 Page({
   data: {
-    latitude: 31.230390,
-    longitude: 113.324520,
+    latitude: 31.223520,
+    longitude: 121.455909,
     markers: [{
       id: 1,
-      latitude: 23.099994,
-      longitude: 113.324520,
-      name: 'T.I.T 创意园'
-    }],
+      latitude: 31.220120,
+      longitude: 121.443128,
+      // name: 'T.I.T 创意园'
+    },
+      {
+        id: 2,
+        latitude: 31.219166,
+        longitude: 121.443466,
+        // name: 'T.I.T 创意园'
+      },
+      {
+        id: 3,
+        latitude: 31.227466,
+        longitude: 121.463488,
+        // name: 'T.I.T 创意园'
+      },
+      {
+        id: 4,
+        latitude: 31.222989,
+        longitude: 121.451300,
+        // name: 'T.I.T 创意园'
+      }],
     covers: [{
       latitude: 23.099994,
       longitude: 113.344520,
-      // iconPath: '/image/location.png'
+      //iconPath: '/image/location.png'
     }, {
       latitude: 23.099994,
       longitude: 113.304520,
-      // iconPath: '/image/location.png'
+      //iconPath: '/image/location.png'
     }]
   },
   onReady: function (e) {
@@ -50,11 +68,11 @@ Page({
     this.mapCtx.includePoints({
       padding: [10],
       points: [{
-        latitude: 23.10229,
-        longitude: 113.3345211,
+        latitude: 31.223520,
+        longitude: 121.455909,
       }, {
-        latitude: 23.00229,
-        longitude: 113.3345211,
+        latitude: 31.023520,
+        longitude: 121.055909,
       }]
     })
   }
