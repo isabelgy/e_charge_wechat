@@ -4,18 +4,23 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+  
   onLoad: function () {
+    // setting page data key 'stations' to all stations
+    // localhost link needs whitelisting
+    const page = this
+    wx.request({
+      url: 'http://localhost:3000/api/v1/stations',
+      success: function (res) {
+        console.log(res.data.stations)
+        page.setData({stations: res.data.stations})
+      }
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -51,4 +56,5 @@ Page({
       hasUserInfo: true
     })
   }
+  
 })
