@@ -1,4 +1,4 @@
-// pages/show/show.js
+// pages/user/user.js
 Page({
 
   /**
@@ -12,17 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // setting page data to single station
-    // localhost needs whitelisting
-    const id = options.id
-    const page = this
-    wx.request({
-      url: `http://localhost:3000/api/v1/stations/${id}`,
-      success: function (res) {
-        page.setData({station: res.data});
-
-      }
-    })
+  
   },
 
   /**

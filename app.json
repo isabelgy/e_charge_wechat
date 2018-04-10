@@ -1,14 +1,18 @@
 {
-  "pages":[
-    "pages/stations/index/index",
-    "pages/stations/show/show",
-    "pages/stations/new/new",
-    "pages/stations/edit/edit"
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/show/show",
+    "pages/scanning/scanning",
+    "pages/rental/rental",
+    "pages/new/new",
+    "pages/edit/edit",
+    "pages/payment/payment"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

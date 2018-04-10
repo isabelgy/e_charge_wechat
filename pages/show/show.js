@@ -1,4 +1,4 @@
-// pages/new/new.js
+// pages/show/show.js
 Page({
 
   /**
@@ -6,24 +6,6 @@ Page({
    */
   data: {
   
-  },
-
-  bindSubmit: function (e) {
-    let new_station = e.detail.value
-    wx.request({
-      url: 'http://localhost:3000/api/v1/stations/',
-      method: 'POST',
-      data: new_station,
-      success: function () {
-        wx.showToast({
-          title: 'Done!',
-          icon: 'success'
-        })
-        wx.reLaunch({
-          url: '/pages/index/index',
-        })
-      }
-    })
   },
 
   /**
