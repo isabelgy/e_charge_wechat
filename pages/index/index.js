@@ -29,11 +29,11 @@ Page({
     covers: [{
       latitude: 23.099994,
       longitude: 113.344520,
-      //iconPath: '/image/location.png'
+      // iconPath: '/image/scooter_icon.jpg'
     }, {
       latitude: 23.099994,
       longitude: 113.304520,
-      //iconPath: '/image/location.png'
+      // iconPath: '/image/scooter_icon.jpg'
     }]
   },
   onReady: function (e) {
@@ -75,5 +75,20 @@ Page({
         longitude: 121.055909,
       }]
     })
-  }
+  },
+  onLoad: function (options) {
+    let page = this;
+    wx.request({
+      url: "http://localhost:3000/api/v1/stations",
+      method: 'GET',
+      success(res) {
+        const stations = res.data.stations;
+
+        page.setData({
+          stations: stations
+        });
+        wx.hideToast();
+      }
+    })
+  },
 })

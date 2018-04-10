@@ -14,5 +14,25 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#33FF33",
+    "selectedColor": "white",
+    "borderStyle": "black",
+    "color": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/random.png",
+        "selectedIconPath": "image/selected-random.png",
+        "text": "Find station"
+      },
+      {
+        "pagePath": "pages/new/new",
+        "iconPath": "image/submit.png",
+        "selectedIconPath": "image/selected-submit.png",
+        "text": "Add new station"
+      }
+    ]
   }
 }
