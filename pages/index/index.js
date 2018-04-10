@@ -6,34 +6,38 @@ Page({
       id: 1,
       latitude: 31.220120,
       longitude: 121.443128,
+      iconPath: '/image/pin.png',
       // name: 'T.I.T 创意园'
     },
       {
         id: 2,
         latitude: 31.219166,
         longitude: 121.443466,
+        iconPath: '/image/pin.png',
         // name: 'T.I.T 创意园'
       },
       {
         id: 3,
         latitude: 31.227466,
         longitude: 121.463488,
+        iconPath: '/image/pin.png',
         // name: 'T.I.T 创意园'
       },
       {
         id: 4,
         latitude: 31.222989,
         longitude: 121.451300,
+        iconPath: '/image/pin.png',
         // name: 'T.I.T 创意园'
       }],
     covers: [{
       latitude: 23.099994,
       longitude: 113.344520,
-      // iconPath: '/image/scooter_icon.jpg'
+      // iconPath: '/image/pin.jpg'
     }, {
       latitude: 23.099994,
       longitude: 113.304520,
-      // iconPath: '/image/scooter_icon.jpg'
+      // iconPath: '/image/pin.jpg'
     }]
   },
   onReady: function (e) {
@@ -76,19 +80,25 @@ Page({
       }]
     })
   },
-  onLoad: function (options) {
-    let page = this;
-    wx.request({
-      url: "http://localhost:3000/api/v1/stations",
-      method: 'GET',
-      success(res) {
-        const stations = res.data.stations;
+  // onLoad: function (options) {
+  //   let page = this;
+  //   wx.request({
+  //     url: "https://easy-mock.com/mock/5acc974ffbaa0f54f4d6a502/stations",
+  //     method: 'GET',
+  //     success(res) {
+  //       const stations = res.data.stations;
+  //       const markers = [{
+  //         id: stations.id,
+  //         latitude: stations.latitude,
+  //         longitude: stations.longitude,
+  //         iconPath: '/image/pin.png',
+  //       }]
+  //     },
 
-        page.setData({
-          stations: stations
-        });
-        wx.hideToast();
-      }
-    })
-  },
+  //       page.setData({
+  //         markers: markers
+  //       });
+  //       wx.hideToast();
+  //     }
+  // }
 })
