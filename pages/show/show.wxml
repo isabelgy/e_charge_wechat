@@ -1,2 +1,32 @@
 <!--pages/show/show.wxml-->
-<text>pages/show/show.wxml</text>
+
+<!--pages/stations/show/show.wxml-->
+<!-- change the name on top page -->
+
+<!-- create a box for the image -->
+<image src="image/green_tick.jpg" style="width: 340px; height: 140px;"   ></image>
+
+<!-- create a box for the address -->
+<view class="card"> <image style="width: 70px; height: 70px; " src="image/green_open.jpg"></image>Address </view>
+
+<!--link box to backend  -->
+
+<!-- create box for charging station id and image -->
+<view class="card"><image style="width: 70px; height: 70px; "></image>Station ID</view>
+
+<!--link box to backend  -->
+
+<!-- box for working status -->
+<view class="card"><image style="width: 70px; height: 70px; "></image>Availability</view>
+
+<!--link box to backend  -->
+
+<!-- dropdown for update to choose unavailable -->
+
+<!-- unavailable needs to save somewhere -->
+
+<!-- charge button and scan image -->
+<button href="#" class="btn-circle">
+<text class="h2"> START CHARGE</text></button>
+
+<!-- link to scanning page -->
