@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/stations/index/index",
-    "pages/stations/show/show",
+    "pages/show/show",
     "pages/stations/new/new",
     "pages/stations/edit/edit"
   ],

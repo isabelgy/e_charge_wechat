@@ -1,0 +1,37 @@
+<!--pages/stations/show/show.wxml-->
+
+
+<!-- change the name on top page -->
+
+
+<!-- create a box for the address -->
+<view> Address</view>
+<img src=""></img>
+
+
+<!-- create a box for the image -->
+
+<!-- create box for charging station id -->
+
+<view> Station ID</view>
+
+
+<!-- box for working status -->
+
+<!-- dropdown for update to choose unavailable -->
+
+
+<!-- unavailable needs to save somewhere -->
+
+<!-- charge button and scan image -->
+<image src="scan.jpg"></image>
+
+<button href="#" class="btn-circle">START CHARGE</button>
+
+
+
+
+<!-- link to scanning page -->
+
+
+
