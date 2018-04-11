@@ -58,7 +58,7 @@ Page({
     const id = options.id
     const page = this
     wx.request({
-      url: `http://localhost:3000/api/v1/stations/11`,
+      url: `http://localhost:3000/api/v1/stations/${id}`,
       success: function (res) {
         page.setData(res.data);
         
