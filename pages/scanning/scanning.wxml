@@ -1,0 +1,4 @@
+<view>
+<button bindtap='scan'>scan</button>
+<text>{{message}}</text>
+</view>

@@ -5,14 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+ message:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
   },
 
   /**
@@ -62,5 +62,18 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  
+  scan: function () {
+    var that = this
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        this.setData({
+          message: res.result
+        })
+        }
+  
+  })
   }
 })
