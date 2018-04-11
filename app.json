@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/scanning/scanning",
     "pages/index/index",
+    "pages/new/new",
+    "pages/scanning/scanning",
     "pages/map/map",
     "pages/test/test",
-    "pages/new/new",
     "pages/user/user",
     "pages/show/show",
     "pages/rental/rental",
