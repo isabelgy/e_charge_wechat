@@ -5,10 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    addmessage: "",
+    lag:"",
+    long: ""
   },
   bindSubmit: function (e) {
-    let new_station = e.detail.value
+    let new_station = { latitude: this.data.lag, longitude: this.data.long}
+    console.log(new_station)
+    console.log(e)
     wx.request({
       url: 'http://localhost:3000/api/v1/stations/',
       method: 'POST',
@@ -28,7 +32,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.mapCtx = wx.createMapContext("mapID100")
+    this.mapCtx.getCenterLocation({
+      success: function (res) {
+
+        console.log(res)
+      }
+    })
+    this.mapCtx.moveToLocation()
   },
 
   /**
@@ -78,5 +89,37 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+
+  btnChooseEventHandle: function () {
+    var that = this
+    wx.chooseLocation({
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          addmessage: res.address,
+          lag: res.latitude,
+          long: res.longitude
+        })
+      },
+      fail: function () {
+
+      },
+      complete: function () {
+
+      }
+    })
+  },
+
+  // btnCenterEventHandle: function () {
+  //   this.mapCtx.getCenterLocation({
+  //     success: function (res) {
+
+  //       console.log(res)
+  //     }
+  //   })
+  //   this.mapCtx.moveToLocation()
+  // }
+
+
 })
