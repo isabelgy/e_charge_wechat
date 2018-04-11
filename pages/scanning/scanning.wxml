@@ -6,3 +6,8 @@
 
 <!-- button to start charging  -->
 <view class="card-button"><image style="width: 70px; height: 70px; "></image>START CHARGING</view>
+
+<view>
+<button bindtap='scan'>scan</button>
+<text>{{message}}</text>
+</view>

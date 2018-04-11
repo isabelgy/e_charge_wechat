@@ -12,9 +12,57 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let page = this;
+
+    wx.showToast({
+      title: 'Loading...',
+      icon: 'loading',
+      duration: 1500
+    });
+    wx.request({
+      url: `http://localhost:3000/api/v1/stations/${options.id}`,
+      method: 'GET',
+      success(res) {
+        var station = res.data;
+
+        // Update local data
+        page.setData(
+          station
+        );
+
+        wx.hideToast();
+      }
+    });
   },
 
+  bindSubmit: function (e) {
+
+    //...
+
+    let latitude = e.detail.value.latitude;
+    let image = e.detail.value.image;
+    let longitude = e.detail.value.longitude;
+    let id = this.data.id;
+
+    let station = {
+      latitude: latitude,
+      image: image,
+      longitude: longitude
+    }
+
+    // Update api data
+    wx.request({
+      url: `http://localhost:3000/api/v1/stations/${id}`,
+      method: 'PUT',
+      data: station,
+      success() {
+        // set data on index page and show
+        wx.redirectTo({
+          url: '/pages/index/index'
+        });
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

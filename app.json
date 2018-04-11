@@ -1,13 +1,16 @@
 {
   "pages": [
+    "pages/scanning/scanning",
     "pages/index/index",
+    "pages/map/map",
+    "pages/test/test",
+    "pages/new/new",
     "pages/user/user",
     "pages/show/show",
-    "pages/scanning/scanning",
     "pages/rental/rental",
-    "pages/new/new",
     "pages/edit/edit",
     "pages/payment/payment"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",
