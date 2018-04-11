@@ -5,10 +5,10 @@
 
 <!-- create a box for the image -->
 
-<image src="/image/green_tick.png" style="width: 340px; height: 140px;"   ></image>
+<image src="/image/charging.jpeg" style=" width: 100%; height: 200px;"   ></image>
 
 <!-- create a box for the address -->
-<view class="card"> <image style="width: 40px; height: 40px; " src="/image/green_location.jpg"></image><view class = "text"> 129, Yan'an Lu, Shanghai </view></view>
+<view class="card"> <image style="width: 40px; height: 40px; " src="/image/green_location.jpg"></image><view class = "address"> 129, Yan'an Lu, Shanghai </view></view>
 
 
 <!--link box to backend  -->
@@ -30,6 +30,6 @@
 
 <!-- charge button and scan image -->
 <button data-id="{{id}}" bindtap='scan' class="btn-circle">
-<text class="h2"> START CHARGE</text></button>
+<text class="h2">START CHARGING</text></button>
 
 <!-- link to scanning page -->

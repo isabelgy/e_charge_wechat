@@ -20,7 +20,7 @@ Page({
       duration: 1500
     });
     wx.request({
-      url: `http://localhost:3000/api/v1/stations/${options.id}`,
+      url: `http://e-charge.herokuapp.com/api/v1/stations/${options.id}`,
       method: 'GET',
       success(res) {
         var station = res.data;

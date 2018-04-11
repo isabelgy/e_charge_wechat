@@ -18,7 +18,7 @@ Page({
       onlyFromCamera: true,
       success: (res) => {
         wx.request({
-          url: `http://localhost:3000/api/v1/stations/${page.data.id}/rentals`,
+          url: `http://e-charge.herokuapp.com/api/v1/stations/${page.data.id}/rentals`,
           method: 'POST',
           data: {user_id: '1', station_id: page.data.id},
           success: function () {

@@ -12,16 +12,19 @@
 }   
 
 .card-button {
+  text-align: center;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: #3EFF8B;
   transition: all 0.3s ease;
   height: 80px;
-  padding: 0px 30px;
-  margin-top: 24px;
+  padding-left: 85px;
+  /* padding: 0px 30px; */
+  margin-top: 24px; 
   display: flex;
   align-items: center;
   color: white;
-  text-align: center;
+  font-size: 30px;
+  
 }   
 
 .text{
@@ -32,3 +35,20 @@ padding:10px;
 white-space: nowrap;
 overflow: visible;
 }
+
+.img {
+  height: 300px;
+}
+
+.timer {
+  padding-top: 10px;
+  height: 80px;
+}
+
+/* .container{
+position: absolute;
+top: 0;
+left: 0;
+right: 0; 
+
+} */

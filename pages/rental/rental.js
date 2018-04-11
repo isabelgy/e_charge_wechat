@@ -8,6 +8,19 @@ Page({
     
   },
 
+  stopCharge: function(e) {
+    
+    wx.reLaunch({
+      url: '/pages/index/index',
+      success: function() {
+        wx.showToast({
+          title: 'Stopped!',
+          icon: 'success'
+        })
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -15,7 +28,7 @@ Page({
     const id = options.id
     const page = this
     wx.request({
-      url: `http://localhost:3000/api/v1/stations/${id}/rentals/${id}`,
+      url: `http://e-charge.herokuapp.com/api/v1/stations/${id}/rentals/${id}`,
       success: function (res) {
         console.log(res)
         page.setData(res.data);

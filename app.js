@@ -13,7 +13,7 @@ App({
           console.log(res)
           //发起网络请求
           wx.request({
-            url: 'http://localhost:3000/api/v1/users/',
+            url: 'http://e-charge.herokuapp.com/api/v1/users/',
             method: "POST",
             data: {
               code: res.code
