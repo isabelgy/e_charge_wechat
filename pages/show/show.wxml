@@ -4,10 +4,12 @@
 <!-- change the name on top page -->
 
 <!-- create a box for the image -->
-<image src="" style="width: 340px; height: 140px;"   ></image>
+
+<image src="/image/green_tick.png" style="width: 340px; height: 140px;"   ></image>
 
 <!-- create a box for the address -->
 <view class="card"> <image style="width: 40px; height: 40px; " src="/image/green_location.jpg"></image><view class = "text"> 129, Yan'an Lu, Shanghai </view></view>
+
 
 <!--link box to backend  -->
 
@@ -27,7 +29,7 @@
 <!-- unavailable needs to save somewhere -->
 
 <!-- charge button and scan image -->
-<button href="#" class="btn-circle">
+<button data-id="{{id}}" bindtap='scan' class="btn-circle">
 <text class="h2"> START CHARGE</text></button>
 
 <!-- link to scanning page -->

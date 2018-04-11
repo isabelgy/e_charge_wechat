@@ -30,24 +30,22 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+
+			"current": -1,
 			"list": [
 				{
-					"id": 0,
-					"name": "Show Page",
+					"id": -1,
+					"name": "show page",
 					"pathName": "pages/show/show",
+
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "Scanning Page",
-					"pathName": "pages/scanning/scanning",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "Rental Page",
-					"pathName": "pages/rental/rental",
+
+					"name": "index page",
+					"pathName": "pages/index/index",
+
 					"query": ""
 				}
 			]

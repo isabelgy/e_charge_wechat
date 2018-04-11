@@ -1,3 +1,4 @@
+
 <!--pages/show/show.wxml-->
 
 <!--pages/stations/show/show.wxml-->
@@ -28,4 +29,5 @@
 
 <!-- button to start charging  -->
 <view class="card-button"><image style="width: 70px; height: 70px; "></image>STOP CHARGING</view>
+
 

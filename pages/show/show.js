@@ -5,14 +5,65 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    qr_result: "",
   },
+
+  scan: function (e) {
+    console.log(e.currentTarget.dataset.id)
+    const page = this
+    console.log('pressed scan')
+    // console.log(page.data)
+    var that = this
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        wx.request({
+          url: `http://localhost:3000/api/v1/stations/${page.data.id}/rentals`,
+          method: 'POST',
+          data: {user_id: '1', station_id: page.data.id},
+          success: function () {
+          
+            wx.navigateTo({
+              url: `../rental/rental?id=${page.data.id}`,
+            })
+            wx.showToast({
+              title: 'Done!',
+              icon: 'success'
+            })
+          }})
+        // if (page.data.id == res.result) {
+        //   console.log('testpassed')
+          // wx.navigateTo({
+          //   url: `../show/show?id=${job.id}`
+          // })
+        }
+        // page.setData({
+        //   qr_result: res.result
+        // // })
+        // console.log(res.result)
+        // console.log(page.data.id)
+        
+        })
+      },
+    
+    
+    
+  
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // loading specific station data from localhost
+    const id = options.id
+    const page = this
+    wx.request({
+      url: `http://localhost:3000/api/v1/stations/${id}`,
+      success: function (res) {
+        page.setData(res.data);
+        
+      }
+    })
   },
 
   /**

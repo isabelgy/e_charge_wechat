@@ -30,15 +30,15 @@ Page({
     //     iconPath: '/image/pin.png',
     //     // name: 'T.I.T 创意园'
     //   }],
-    // covers: [{
-    //   latitude: 23.099994,
-    //   longitude: 113.344520,
-    //   // iconPath: '/image/pin.jpg'
-    // }, {
-    //   latitude: 23.099994,
-    //   longitude: 113.304520,
-    //   // iconPath: '/image/pin.jpg'
-    // }]
+    covers: [{
+      latitude: 23.099994,
+      longitude: 113.344520,
+      // iconPath: '/image/pin.jpg'
+    }, {
+      latitude: 23.099994,
+      longitude: 113.304520,
+      // iconPath: '/image/pin.jpg'
+    }]
   },
   onReady: function (e) {
     this.mapCtx = wx.createMapContext('myMap')
@@ -80,10 +80,19 @@ Page({
       }]
     })
   },
+  click: function (e) {
+    console.log(e)
+    let page = this;
+    const id = e.markerId
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`,
+    })
+  },  
   onLoad: function (options) {
     let page = this;
     wx.request({
-      url: "https://easy-mock.com/mock/5acc974ffbaa0f54f4d6a502/stations",
+      //url: //"https://easy-mock.com/mock/5acc974ffbaa0f54f4d6a502/stations",
+      url: "http://localhost:3000/api/v1/stations",
       method: 'GET',
       success(res) {
         const stations = res.data.stations;
