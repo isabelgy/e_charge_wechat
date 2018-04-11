@@ -5,14 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    const id = options.id
+    const page = this
+    wx.request({
+      url: `http://localhost:3000/api/v1/stations/${id}/rentals/${id}`,
+      success: function (res) {
+        console.log(res)
+        page.setData(res.data);
+
+      }
+    })
   },
 
   /**

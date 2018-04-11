@@ -1,2 +1,3 @@
 <!--pages/rental/rental.wxml-->
 <text>pages/rental/rental.wxml</text>
+<text>{{data}}</text>
