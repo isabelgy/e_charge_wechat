@@ -28,32 +28,6 @@
 		"game": {
 			"currentL": -1,
 			"list": []
-		},
-		"miniprogram": {
-
-			"current": 1,
-			"list": [
-				{
-					"id": -1,
-					"name": "Show Page",
-					"pathName": "pages/show/show",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "Scanning Page",
-					"pathName": "pages/scanning/scanning",
-
-			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "edit",
-					"pathName": "pages/edit/edit",
-
-					"query": ""
-				}
-			]
 		}
 	}
 }
