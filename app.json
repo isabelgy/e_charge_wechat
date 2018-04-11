@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/scanning/scanning",
     "pages/index/index",
+    "pages/scanning/scanning",
     "pages/map/map",
     "pages/test/test",
     "pages/new/new",
