@@ -30,18 +30,22 @@
 			"list": []
 		},
 		"miniprogram": {
+
 			"current": -1,
 			"list": [
 				{
 					"id": -1,
 					"name": "show page",
 					"pathName": "pages/show/show",
+
 					"query": ""
 				},
 				{
 					"id": -1,
+
 					"name": "index page",
 					"pathName": "pages/index/index",
+
 					"query": ""
 				}
 			]

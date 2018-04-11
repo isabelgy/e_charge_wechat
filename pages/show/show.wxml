@@ -5,21 +5,22 @@
 
 <!-- create a box for the image -->
 
-<image src="/image/green_tick.png" style="width: 340px; height: 140px"   ></image>
+<image src="/image/green_tick.png" style="width: 340px; height: 140px;"   ></image>
 
 <!-- create a box for the address -->
-<view class="card"> <image style="width: 70px; height: 70px; " src="/image/green_open.jpg"></image>Address </view>
+<view class="card"> <image style="width: 40px; height: 40px; " src="/image/green_location.jpg"></image><view class = "text"> 129, Yan'an Lu, Shanghai </view></view>
 
 
 <!--link box to backend  -->
 
 <!-- create box for charging station id and image -->
-<view class="card"><image style="width: 70px; height: 70px; "></image>Station ID</view>
+<view class="card"><image src= "/image/electric_charger.png" style="width: 30px; height: 30px;  "></image><view class="text">95783</view>
+</view>
 
 <!--link box to backend  -->
 
 <!-- box for working status -->
-<view class="card"><image style="width: 70px; height: 70px; "></image>Availability</view>
+<view class="card"><image src="/image/green_tick.png" style="width: 30px; height: 30px; "></image><view class= "text">Available</view></view>
 
 <!--link box to backend  -->
 
