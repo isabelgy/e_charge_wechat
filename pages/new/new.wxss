@@ -1,1 +1,5 @@
 /* pages/new/new.wxss */
+.mapstyle{
+  width: 750rpx;
+  height: 780rpx;
+}
