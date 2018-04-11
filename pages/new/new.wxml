@@ -8,15 +8,15 @@
   <view>
 
 <map id="mapID100" class = "mapstyle" scale ='14' markers= "{{markers}}" controls = "{{controls}}" bindcontroltap='controlsEventHandle' show-location/>
-
+ <text>
+{{addmessage}}
+</text>
 <!-- <button bindtap= 'btnGetEventHandle'> getLocation</button> -->
 <button bindtap= 'btnChooseEventHandle'>choosetLocation</button>
 <!-- <button bindtap= 'btnOpenEventHandle'> openLocation</button> -->
 <!-- <button bindtap= 'btnCenterEventHandle'> GetCenter</button> -->
  <button bindtap="bindSubmit" style="margin-bottom:50px " type="primary" form-type="submit">Submit</button>
- <text>
-{{addmessage}}
-</text>
+
 </view>
 
        
