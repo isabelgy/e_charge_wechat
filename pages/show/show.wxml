@@ -4,10 +4,10 @@
 <!-- change the name on top page -->
 
 <!-- create a box for the image -->
-<image src="image/green_tick.jpg" style="width: 340px; height: 140px;"   ></image>
+<image src="/image/green_tick.png" style="width: 340px; height: 140px"   ></image>
 
 <!-- create a box for the address -->
-<view class="card"> <image style="width: 70px; height: 70px; " src="image/green_open.jpg"></image>Address </view>
+<view class="card"> <image style="width: 70px; height: 70px; " src="/image/green_open.jpg"></image>Address </view>
 
 <!--link box to backend  -->
 
