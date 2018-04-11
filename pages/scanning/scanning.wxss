@@ -32,3 +32,12 @@
   color: white;
   text-align: center;
 }   
+
+.text{
+margin-right: 90px;
+margin-left: 10px;
+width: 100px;
+padding:10px;
+white-space: nowrap;
+overflow: visible;
+}

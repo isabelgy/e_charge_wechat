@@ -2,7 +2,8 @@
 <view class="scanbox"></view>
 
 <!-- box for charger id  -->
-<view class="card"><image style="width: 70px; height: 70px; "></image>Station ID</view>
+<view class="card"><image src= "/image/electric_charger.png" style="width: 30px; height: 30px;  "></image><view class="text">95783</view>
+</view>
 
 <!-- button to start charging  -->
 <view class="card-button"><image style="width: 70px; height: 70px; "></image>START CHARGING</view>

@@ -1,2 +1,31 @@
-<!--pages/rental/rental.wxml-->
-<text>pages/rental/rental.wxml</text>
+<!--pages/show/show.wxml-->
+
+<!--pages/stations/show/show.wxml-->
+<!-- change the name on top page -->
+
+<!-- create a box for the image -->
+<image style="width: 100px; height: 5px;">
+</image><view class="text"></view>
+
+
+
+<!-- create box for charging station id and image -->
+<view class="card"><image src= "/image/electric_charger.png" style="width: 30px; height: 30px;  "></image><view class="text">95783</view>
+</view>
+
+<!-- create box for TIMER -->
+<view class="card"><image src= "/image/timer.png" style="width: 200px; height:40px; ">
+</image>
+</view>
+
+<!-- box for IMAGE -->
+<image src= "/image/bear.png" style="width: 350px; height: 210px;">
+</image>
+
+
+
+
+
+<!-- button to start charging  -->
+<view class="card-button"><image style="width: 70px; height: 70px; "></image>STOP CHARGING</view>
+
