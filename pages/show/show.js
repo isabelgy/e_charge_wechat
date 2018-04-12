@@ -18,10 +18,12 @@ Page({
       onlyFromCamera: true,
       success: (res) => {
         wx.request({
+
           // url: `http://localhost:3000/api/v1/stations/${page.data.id}/rentals`,
+
           url: `http://e-charge.herokuapp.com/api/v1/stations/${page.data.id}/rentals`,
           method: 'POST',
-          data: {user_id: (wx.getStorageSync('user_id')), station_id: page.data.id},
+          data: {user_id: (wx.getStorageSync('user_id')), station_id:   page.data.id},
           success: function (res) {
             console.log(res.data)
             wx.navigateTo({
@@ -55,16 +57,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-    
+    let page = this;
+    console.log(options)
     // loading specific station data from localhost
     const id = options.id
-    const page = this
+    console.log(id)
+    
     wx.request({
-      url: `http://localhost:3000/api/v1/stations/${id}`,
+      //url: `http://localhost:3000/api/v1/stations/${id}`,
+      url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
       success: function (res) {
         page.setData(res.data);
-        
       }
     })
   },

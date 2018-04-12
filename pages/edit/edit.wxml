@@ -1,2 +1,32 @@
 <!--pages/edit/edit.wxml-->
-<text>pages/edit/edit.wxml</text>
+
+
+<!--pages/new/new.wxml-->
+<!-- <import src="/shared/form.wxml"/>
+<template is="form"/> -->
+
+  <view>
+
+<map id="mapID100" class = "mapstyle" scale ='17' latitude="{{lag}}" longitude="{{long}}" markers= "{{markers}}" controls = "{{controls}}" bindcontroltap='controlsEventHandle' show-location/>
+ <text>Location: 
+{{addmessage}}
+</text>
+ <!-- <button bindtap= 'reportBroken'> Broken </button> 
+<button bindtap= 'wrong'> Wrong Location</button>
+ <button bindtap= 'update'> Update Photo </button>
+  -->
+
+</view>
+<picker mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected">
+    <button>{{array[index]}}</button>
+</picker>
+<button bindtap="bindSubmit" style="margin-bottom:50px " type="primary" form-type="submit">Submit</button>
+
+<!-- <view>
+  <view>Report the Problem</view>
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" bindchange="bindChange">
+    <picker-view-column>
+      <view wx:for="{{array[index]}}" style="line-height: 50px">{{array[index]}}</view>
+    </picker-view-column>
+  </picker-view>
+</view> -->

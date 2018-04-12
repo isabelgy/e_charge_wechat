@@ -45,8 +45,10 @@ Page({
     const station_id = options.station_id
     const page = this
     wx.request({
+
       // url: `http://localhost:3000/api/v1/stations/${station_id}/rentals/${id}`,
       url: `http://e-charge.herokuapp.com/api/v1/stations/${station_id}/rentals/${id}`,
+
       success: function (res) {
         
         page.setData(res.data);
