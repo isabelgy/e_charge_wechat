@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    array: ['- Choose a Reason -', 'Charging Device is Broken', 'Station No Longer Exist', 'The QR code Does Not Work', 'Other'],
+    index: 0
   },
 
   /**
@@ -110,5 +111,11 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  listenerPickerSelected: function (e) {
+    //改变index值，通过setData()方法重绘界面
+    this.setData({
+      index: e.detail.value
+    });
   }
 })
