@@ -20,9 +20,9 @@ Page({
       success: (res) => {
         wx.request({
 
-          url: `http://localhost:3000/api/v1/stations/${page.data.id}/rentals`,
+          //url: `http://localhost:3000/api/v1/stations/${page.data.id}/rentals`,
 
-          //url: `http://e-charge.herokuapp.com/api/v1/stations/${page.data.id}/rentals`,
+          url: `http://e-charge.herokuapp.com/api/v1/stations/${page.data.id}/rentals`,
           method: 'POST',
           data: {user_id: (wx.getStorageSync('user_id')), station_id:   page.data.id},
           success: function (res) {
@@ -63,17 +63,27 @@ Page({
     const id = options.id
     
     wx.request({
-      url: `http://localhost:3000/api/v1/stations/${id}`,
-      //url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
+//       url: `http://localhost:3000/api/v1/stations/${id}`,
+      url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
       success: function (res) {
         console.log(res)
         page.setData(res.data);
         console.log(page.data)
       }
     })
+  
   },
 
-  
+  editStation: function (e) {
+    console.log(e)
+    let page = this;
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/edit/edit?id=${id}`,
+    })
+  },
+
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -121,5 +131,7 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+
+  
 })

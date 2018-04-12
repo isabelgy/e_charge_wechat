@@ -8,6 +8,7 @@
 <image src="/image/charging.jpeg" style=" width: 100%; height: 200px;"   ></image>
 
 <!-- create a box for the address -->
+
  <view class="card"><image src= "/image/green_marker.png" style="width: 30px; height: 30px;  "></image><view class="text">{{address}}</view>
 </view> 
 
@@ -52,7 +53,12 @@
 
 <!-- link to scanning page -->
 
+
 <view class="card">
   <button class="btn-s">Edit</button>
   <button class="btn-s">History</button>
 </view>
+
+<button bindtap='editStation' data-id= '{{id}}'> Edit
+</button>
+
