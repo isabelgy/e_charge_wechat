@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: ['- Choose a Reason -', 'Charging Device is Broken', 'Station No Longer Exist', 'The QR code Does Not Work', 'Other'],
+    array: [ 'Charging Device is Broken', 'Station No Longer Exist', 'The QR code Does Not Work', 'Other'],
     index: 0
   },
 
@@ -14,14 +14,14 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-
+    const id = options.id
     wx.showToast({
       title: 'Loading...',
       icon: 'loading',
       duration: 1500
     });
     wx.request({
-      url: `http://e-charge.herokuapp.com/api/v1/stations/${options.id}`,
+      url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
       method: 'GET',
       success(res) {
         var station = res.data;
@@ -117,5 +117,14 @@ Page({
     this.setData({
       index: e.detail.value
     });
-  }
+  },
+
+  //  bindChange: function (e) {
+  //   const val = e.detail.value
+  //   this.setData({
+  //     year: this.data.years[val[0]],
+  //     month: this.data.months[val[1]],
+  //     day: this.data.days[val[2]]
+  //   })
+  // }
 })

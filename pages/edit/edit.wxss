@@ -1,1 +1,5 @@
 /* pages/edit/edit.wxss */
+
+.center{
+  text-align: center;
+}
