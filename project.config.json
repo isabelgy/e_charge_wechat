@@ -32,7 +32,9 @@
 		"miniprogram": {
 
 
+
 			"current": 2,
+
 
 			"list": [
 				{
@@ -55,9 +57,11 @@
 				},
 				{
 					"id": -1,
+
 					"name": "Profile page",
 					"pathName": "pages/user/user",
 					"query": ""
+
 				}
 			]
 		}
