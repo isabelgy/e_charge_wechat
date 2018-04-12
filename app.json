@@ -35,6 +35,12 @@
         "iconPath": "image/station_inactive.png",
         "selectedIconPath": "image/station_active.png",
         "text": "Add new station"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "image/profile_inactive.png",
+        "selectedIconPath": "image/profile_active.png",
+        "text": "Profile"
       }
     ]
   }
