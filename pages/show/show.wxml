@@ -23,6 +23,7 @@
   <view class="text-s">{{id}}</view>
   </view>
 
+<!-- box for working status -->
   <view class="card-s" wx:if="{{availability==true}}" >
     <image src="/image/available.png" style="width: 30px; height: 30px;"/>
     <view class="text-m">Available</view>
@@ -36,17 +37,8 @@
 
 <!--link box to backend  -->
 
-<!-- box for working status -->
 
-  <!-- <view class="card" wx:if="{{availability==true}}" >
-    <image src="/image/available.png" style="width: 30px; height: 30px;"/>
-    <view class="text">Available</view>
-  </view>
 
-  <view class="card" wx:else >
-    <image src="/image/notavailable.png" style="width: 30px; height: 30px;"/>
-    <view class="text">Not Available</view>
-  </view> -->
 
 <!--link box to backend  -->
 
@@ -59,3 +51,8 @@
 <text class="h2">START CHARGING</text></button>
 
 <!-- link to scanning page -->
+
+<view class="card">
+  <button>Edit</button>
+  <button>History</button>
+</view>
