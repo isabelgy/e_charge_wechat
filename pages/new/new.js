@@ -45,7 +45,7 @@ Page({
             id: 100000,
             latitude: res.latitude,
             longitude: res.longitude,
-            iconPath: '/image/pin.png'
+            iconPath: '/image/green_marker.png'
           }]
         })
       }
@@ -114,7 +114,7 @@ Page({
             id: 100000,
             latitude: res.latitude,
             longitude: res.longitude,
-            iconPath: '/image/pin.png'
+            iconPath: '/image/green_marker.png'
           }]
         })
       },

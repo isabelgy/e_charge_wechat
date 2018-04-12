@@ -8,7 +8,7 @@
 <image src="/image/charging.jpeg" style=" width: 100%; height: 200px;"   ></image>
 
 <!-- create a box for the address -->
-<view class="card"> <image style="width: 40px; height: 40px; " src="/image/green_location.jpg"></image><view class = "address"> 129, Yan'an Lu, Shanghai </view></view>
+<view class="card"> <image style="width: 40px; height: 40px; " src="/image/green_marker.png"></image><view class = "address"> 129, Yan'an Lu, Shanghai </view></view>
 
 
 <!--link box to backend  -->
@@ -37,3 +37,5 @@
 <text class="h2">START CHARGING</text></button>
 
 <!-- link to scanning page -->
+<button bindtap='editStation' data-id= '{{id}}'> Edit
+</button>

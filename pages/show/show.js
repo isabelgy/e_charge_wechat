@@ -68,7 +68,18 @@ Page({
         page.setData(res.data);
       }
     })
+  
   },
+
+  editStation: function (e) {
+    console.log(e)
+    let page = this;
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/edit/edit?id=${id}`,
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -117,5 +128,7 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+
+  
 })
