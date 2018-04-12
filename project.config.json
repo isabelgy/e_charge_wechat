@@ -30,7 +30,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+
+
+
+			"current": 2,
+
+
 			"list": [
 				{
 					"id": -1,
@@ -52,16 +57,11 @@
 				},
 				{
 					"id": -1,
-					"name": "map",
-					"pathName": "pages/map/map",
+
+					"name": "Profile page",
+					"pathName": "pages/user/user",
 					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "edit",
-					"pathName": "pages/edit/edit",
-					"query": "",
-					"scene": "1025"
+
 				}
 			]
 		}

@@ -9,7 +9,7 @@ Page({
   },
 
   scan: function (e) {
-    console.log(e.currentTarget.dataset.id)
+    // console.log(e.currentTarget.dataset.id)
     const page = this
     console.log('pressed scan')
     // console.log(page.data)
@@ -18,13 +18,14 @@ Page({
       onlyFromCamera: true,
       success: (res) => {
         wx.request({
-          url: `http://e-charge.herokuapp.com/api/v1/stations/${page.data.id}/rentals`,
+          url: `http://localhost:3000/api/v1/stations/${page.data.id}/rentals`,
+          // url: `http://e-charge.herokuapp.com/api/v1/stations/${page.data.id}/rentals`,
           method: 'POST',
-          data: {user_id: '1', station_id: page.data.id},
-          success: function () {
-          
+          data: {user_id: (wx.getStorageSync('user_id')), station_id: page.data.id},
+          success: function (res) {
+            console.log(res.data)
             wx.navigateTo({
-              url: `../rental/rental?id=${page.data.id}`,
+              url: `../rental/rental?id=${res.data.id}&station_id=${res.data.station_id}`,
             })
             wx.showToast({
               title: 'Done!',
@@ -54,6 +55,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+    
     // loading specific station data from localhost
     const id = options.id
     const page = this

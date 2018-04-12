@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    timer: 0
   },
 
   stopCharge: function(e) {
@@ -21,14 +21,21 @@ Page({
     })
   },
 
+  timerSet: function (e) {
+    this.setData({timer: e.detail.value})
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     const id = options.id
+    console.log(options)
+    const station_id = options.station_id
     const page = this
     wx.request({
-      url: `http://e-charge.herokuapp.com/api/v1/stations/${id}/rentals/${id}`,
+      url: `http://localhost:3000/api/v1/stations/${station_id}/rentals/${id}`,
+      // url: `http://e-charge.herokuapp.com/api/v1/stations/${id}/rentals/${id}`
       success: function (res) {
         console.log(res)
         page.setData(res.data);
