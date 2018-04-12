@@ -10,9 +10,9 @@
       bindmarkertap="click"
       show-location
     >
-     <cover-view class="container" >
+      <!-- <cover-view class="container" > -->
       <cover-image class="img" src="/image/location.png" bindtap="moveToLocation"/>
-    </cover-view>
+    <!-- </cover-view>  -->
     </map>
      
   </view>
