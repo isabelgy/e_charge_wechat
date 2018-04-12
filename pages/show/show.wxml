@@ -17,14 +17,28 @@
 <!--link box to backend  -->
 
 <!-- create box for charging station id and image -->
-<view class="card"><image src= "/image/id.png" style="width: 30px; height: 30px;  "></image><view class="text">{{id}}</view>
+<view class="card">
+  <view class="card-m">
+  <image src= "/image/id.png" style="width: 30px; height: 30px;"/>
+  <view class="text-s">{{id}}</view>
+  </view>
+
+  <view class="card-s" wx:if="{{availability==true}}" >
+    <image src="/image/available.png" style="width: 30px; height: 30px;"/>
+    <view class="text-m">Available</view>
+  </view>
+
+  <view class="card-s" wx:else >
+    <image src="/image/notavailable.png" style="width: 30px; height: 30px;"/>
+    <view class="text-m">Not Available</view>
+  </view>
 </view>
 
 <!--link box to backend  -->
 
 <!-- box for working status -->
 
-  <view class="card" wx:if="{{availability==true}}" >
+  <!-- <view class="card" wx:if="{{availability==true}}" >
     <image src="/image/available.png" style="width: 30px; height: 30px;"/>
     <view class="text">Available</view>
   </view>
@@ -32,7 +46,7 @@
   <view class="card" wx:else >
     <image src="/image/notavailable.png" style="width: 30px; height: 30px;"/>
     <view class="text">Not Available</view>
-  </view>
+  </view> -->
 
 <!--link box to backend  -->
 

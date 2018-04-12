@@ -5,38 +5,49 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  color: white;
+  color: black;
   position:relative;
-  margin-top:4%;
+  margin-top:30px;
   padding-top:10px;
   
 
 }
 
 .text{
-margin-right: 90px;
+margin-right: 50px;
 margin-left: 10px;
 width: 100px;
 padding:10px;
 white-space: nowrap;
-overflow: visible;
+overflow-wrap: normal;
 color: black;
 }
-  .h2 { 
-  position: center;
-  width: 50px;
-  height: 50px;
-  right:35px;
-  top: 40px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  line-height: normal;
-  font-size: 18px;
-  text-align: center;
- 
 
+.text-s {
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 80px;
+  color: black;
+}
+.text-m {
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 150px;
+  color: black;
+}
 
+.h2 { 
+position: center;
+width: 50px;
+height: 50px;
+right:35px;
+top: 40px;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 18px;
+text-align: center;
 }  
 
 .card {
@@ -47,11 +58,17 @@ color: black;
   padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: inline-block;
   border: 1px solid #F2F2F2;
   color: #BDBDBD;
 }   
 
+.card-s {
+  display: flex;
+}
+.card-m {
+  display:flex;
+}
 image.resize {
   width: 70rpx;
   height: 70rpx;
