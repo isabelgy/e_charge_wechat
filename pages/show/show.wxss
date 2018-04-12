@@ -13,11 +13,11 @@
 }
 
 .text{
-margin-right: 50px;
-margin-left: 10px;
-width: 100px;
+margin-right: 20px;
+margin-left: 20px;
+width: 300px;
 padding:10px;
-white-space: nowrap;
+white-space: wrap; 
 overflow-wrap: normal;
 color: black;
 }
