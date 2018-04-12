@@ -6,16 +6,18 @@
   height: 120px;
   border-radius: 50%;
   color: black;
-  position:relative;
+  position: relative; 
   margin-top:30px;
   margin-bottom:30px;
-  padding-top:10px;
+  text-justify: auto; 
+  font-weight: bolder;
+  padding: 10px 10px;
 }
 
 .text{
-margin-right: 20px;
+margin-right: 10px;
 margin-left: 20px;
-width: 300px;
+width: 320px;
 padding:10px;
 white-space: wrap; 
 overflow-wrap: normal;
@@ -31,23 +33,23 @@ color: black;
 .text-m {
   margin-right: 20px;
   margin-left: 20px;
-  width: 150px;
+  width: 120px;
   color: black;
 }
 
-.h2 { 
+ .h2 { 
 position: center;
 width: 50px;
-height: 50px;
+height: 120px;
 right:35px;
-top: 40px;
+top: 40px; 
 font-family: Roboto;
 font-style: normal;
 font-weight: bold;
 line-height: normal;
 font-size: 18px;
-text-align: center;
-}  
+vertical-align: middle;
+}   
 
 .card {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
@@ -72,8 +74,12 @@ image.resize {
   width: 70rpx;
   height: 70rpx;
 }
-button {
-  background-color: #828282;
+.btn-s {
+  border: transparent; 
   color: black;
-  width: 80px;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  background-color: white;
+
 }
