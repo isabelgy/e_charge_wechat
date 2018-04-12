@@ -33,7 +33,7 @@ Page({
     covers: [{
       latitude: 23.099994,
       longitude: 113.344520,
-      // iconPath: '/image/green_marker.jpg'
+      //iconPath: '/image/red_marker.jpg'
     }, {
       latitude: 23.099994,
       longitude: 113.304520,
