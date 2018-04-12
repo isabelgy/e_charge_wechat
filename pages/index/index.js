@@ -91,8 +91,9 @@ Page({
   onLoad: function (options) {
     let page = this;
     wx.request({
+      url: "http://localhost:3000/api/v1/stations",
       // url: "https://easy-mock.com/mock/5acc974ffbaa0f54f4d6a502/stations",
-      url: "https://e-charge.herokuapp.com/api/v1/stations",
+      // url: "https://e-charge.herokuapp.com/api/v1/stations",
       method: 'GET',
       success(res) {
         const stations = res.data.stations;
