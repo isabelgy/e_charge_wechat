@@ -3,7 +3,7 @@
 <text>Add a Station</text>
 <map id="mapID102" class = "mapstyle" latitude= '31.2568' longitude='121.285621' scale ='14' markers= "{{markers}}" controls = "{{controls}}" bindcontroltap='controlsEventHandle' show-location/>
 
-<!-- <button bindtap= 'btnGetEventHandle'> getLocation</button> -->
+ <button bindtap= 'moveToLocation'> getLocation</button> 
 <button bindtap= 'btnChooseEventHandle'>choosetLocation</button>
 <text>
 {{addmessage}}

@@ -9,6 +9,7 @@ Page({
     lag:"",
     long: ""
   },
+
   bindSubmit: function (e) {
     let new_station = { latitude: this.data.lag, longitude: this.data.long}
     console.log(new_station)
@@ -32,14 +33,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.mapCtx = wx.createMapContext("mapID100")
-    this.mapCtx.getCenterLocation({
+    var that = this
+    wx.chooseLocation({
       success: function (res) {
-
         console.log(res)
+        that.setData({
+          addmessage: res.address,
+          lag: res.latitude,
+          long: res.longitude,
+          markers: [{
+            id: 100000,
+            latitude: res.latitude,
+            longitude: res.longitude,
+            iconPath: '/image/pin.png'
+          }]
+        })
       }
     })
-    this.mapCtx.moveToLocation()
   },
 
   /**
@@ -92,24 +102,29 @@ Page({
   },
 
   btnChooseEventHandle: function () {
-    var that = this
+  var that = this
     wx.chooseLocation({
       success: function (res) {
         console.log(res)
         that.setData({
           addmessage: res.address,
           lag: res.latitude,
-          long: res.longitude
+          long: res.longitude,
+          markers: [{
+            id: 100000,
+            latitude: res.latitude,
+            longitude: res.longitude,
+            iconPath: '/image/pin.png'
+          }]
         })
       },
       fail: function () {
 
       },
       complete: function () {
-
       }
     })
-  },
+  }
 
   // btnCenterEventHandle: function () {
   //   this.mapCtx.getCenterLocation({
@@ -121,5 +136,14 @@ Page({
   //   this.mapCtx.moveToLocation()
   // }
 
+//on load 
+  //this.mapCtx = wx.createMapContext("mapID100")
+  // this.mapCtx.getCenterLocation({
+  //   success: function (res) {
+
+  //     console.log(res)
+  //   }
+  // })
+  //   this.mapCtx.moveToLocation()
 
 })
