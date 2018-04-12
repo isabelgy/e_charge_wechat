@@ -30,7 +30,9 @@
 			"list": []
 		},
 		"miniprogram": {
+
 			"current": 2,
+
 			"list": [
 				{
 					"id": -1,
@@ -48,6 +50,12 @@
 					"id": -1,
 					"name": "rental page",
 					"pathName": "pages/rental/rental",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "Profile page",
+					"pathName": "pages/user/user",
 					"query": ""
 				}
 			]
