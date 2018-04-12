@@ -2,6 +2,7 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
+    const page = this
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
@@ -10,13 +11,20 @@ App({
     wx.login({
       success: function (res) {
         if (res.code) {
-          console.log(res)
+          
           //发起网络请求
           wx.request({
-            url: 'http://e-charge.herokuapp.com/api/v1/users/',
+            url: 'http://localhost:3000/api/v1/users/',
+            // url: 'http://e-charge.herokuapp.com/api/v1/users/',
             method: "POST",
             data: {
               code: res.code
+            },
+            success: function(res) {
+              // console.log(res.data)
+              wx.setStorageSync('openid', res.data.openid)
+              wx.setStorageSync('user_id', res.data.id)
+              // page.globalData,setData({})
             }
           })
         } else {
