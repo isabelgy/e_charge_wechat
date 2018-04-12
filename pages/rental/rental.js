@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    timer: 0
   },
 
   stopCharge: function(e) {
@@ -19,6 +19,10 @@ Page({
         })
       }
     })
+  },
+
+  timerSet: function (e) {
+    this.setData({timer: e.detail.value})
   },
 
   /**
