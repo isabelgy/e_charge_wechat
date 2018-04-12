@@ -6,38 +6,38 @@ Page({
     //   id: 1,
     //   latitude: 31.220120,
     //   longitude: 121.443128,
-    //   iconPath: '/image/pin.png',
+    //   iconPath: '/image/green_marker.png',
     //   // name: 'T.I.T 创意园'
     // },
     //   {
     //     id: 2,
     //     latitude: 31.219166,
     //     longitude: 121.443466,
-    //     iconPath: '/image/pin.png',
+    //     iconPath: '/image/green_marker.png',
     //     // name: 'T.I.T 创意园'
     //   },
     //   {
     //     id: 3,
     //     latitude: 31.227466,
     //     longitude: 121.463488,
-    //     iconPath: '/image/pin.png',
+    //     iconPath: '/image/green_marker.png',
     //     // name: 'T.I.T 创意园'
     //   },
     //   {
     //     id: 4,
     //     latitude: 31.222989,
     //     longitude: 121.451300,
-    //     iconPath: '/image/pin.png',
+    //     iconPath: '/image/green_marker.png',
     //     // name: 'T.I.T 创意园'
     //   }],
     covers: [{
       latitude: 23.099994,
       longitude: 113.344520,
-      // iconPath: '/image/pin.jpg'
+      // iconPath: '/image/green_marker.jpg'
     }, {
       latitude: 23.099994,
       longitude: 113.304520,
-      // iconPath: '/image/pin.jpg'
+      // iconPath: '/image/green_marker.jpg'
     }]
   },
   onReady: function (e) {
@@ -87,7 +87,7 @@ Page({
     wx.navigateTo({
       url: `/pages/show/show?id=${id}`,
     })
-  },  
+  },
   onLoad: function (options) {
     let page = this;
     wx.request({
@@ -104,7 +104,7 @@ Page({
             // console.log(mark.id)
             mark.latitude= station.latitude,
             mark.longitude = station.longitude,
-            mark.iconPath = '/image/pin.png'
+            mark.iconPath = '/image/green_marker.png'
             markers.push(mark)
         })
         page.setData({markers: markers})

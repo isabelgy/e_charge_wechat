@@ -20,20 +20,20 @@
   },
   "tabBar": {
     "backgroundColor": "#3EFF8B",
-    "selectedColor": "white",
+    "selectedColor": "#333333",
     "borderStyle": "black",
-    "color": "black",
+    "color": "#828282",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "image/random.png",
-        "selectedIconPath": "image/selected-random.png",
+        "iconPath": "image/find_inactive.png",
+        "selectedIconPath": "image/find_active.png",
         "text": "Find station"
       },
       {
         "pagePath": "pages/new/new",
-        "iconPath": "image/submit.png",
-        "selectedIconPath": "image/selected-submit.png",
+        "iconPath": "image/station_inactive.png",
+        "selectedIconPath": "image/station_active.png",
         "text": "Add new station"
       }
     ]
