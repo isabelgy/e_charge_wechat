@@ -39,31 +39,33 @@ Page({
   bindSubmit: function (e) {
 
     //...
-
-    let latitude = e.detail.value.latitude;
-    let image = e.detail.value.image;
-    let longitude = e.detail.value.longitude;
+    let that = this;
+    // let latitude = e.detail.value.latitude;
+    // let image = e.detail.value.image;
+    // let longitude = e.detail.value.longitude;
     let id = this.data.id;
-
-    let station = {
-      latitude: latitude,
-      image: image,
-      longitude: longitude
+    let newstation = {
+      latitude: that.data.latitude,
+      image: that.data.image,
+      longitude: that.data.longitude,
+      availability: false
     }
-
+    console.log(newstation)
     // Update api data
     wx.request({
-      url: `http://localhost:3000/api/v1/stations/${id}`,
+      url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
       method: 'PUT',
-      data: station,
-      success() {
+      data: newstation,
+      success: function() {
         // set data on index page and show
-        wx.redirectTo({
+        wx.reLaunch({
           url: '/pages/index/index'
         });
       }
     });
   },
+
+ 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

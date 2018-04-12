@@ -7,6 +7,8 @@
 
   <view>
 
+  <text>Station ID {{id}}</text>
+
 <map id="mapID100" class = "mapstyle" scale ='17' latitude="{{lag}}" longitude="{{long}}" markers= "{{markers}}" controls = "{{controls}}" bindcontroltap='controlsEventHandle' show-location/>
  <text>Location: 
 {{addmessage}}
