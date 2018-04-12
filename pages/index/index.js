@@ -81,9 +81,9 @@ Page({
   //   })
   // },
   click: function (e) {
-    console.log(e)
     let page = this;
     const id = e.markerId
+    console.log(e)
     wx.navigateTo({
       url: `/pages/show/show?id=${id}`,
     })
@@ -123,7 +123,7 @@ Page({
   onShow: function () {
     let page = this;
     wx.request({
-      //url: "http://localhost:3000/api/v1/stations",
+//       url: "http://localhost:3000/api/v1/stations",
       // url: "https://easy-mock.com/mock/5acc974ffbaa0f54f4d6a502/stations",
       url: "https://e-charge.herokuapp.com/api/v1/stations",
       method: 'GET',
@@ -137,14 +137,16 @@ Page({
             // console.log(mark.id)
             mark.latitude = station.latitude,
             mark.longitude = station.longitude,
-            mark.availability = station.availability
-          if (mark.availability === true) {
-            mark.iconPath = '/image/green_marker.png';
-          } else {
-            mark.iconPath = '/image/red_marker.png'
-          }
 
-          markers.push(mark)
+            mark.availability = station.availability
+            mark.address = station.address
+            if (mark.availability === true){
+              mark.iconPath = '/image/green_marker.png';
+            } else {
+              mark.iconPath = '/image/red_marker.png'
+            }
+            markers.push(mark)
+
         })
         page.setData({ markers: markers })
         console.log(page.data.markers)

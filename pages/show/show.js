@@ -6,6 +6,7 @@ Page({
    */
   data: {
     qr_result: "",
+    address: ""
   },
 
   scan: function (e) {
@@ -19,7 +20,7 @@ Page({
       success: (res) => {
         wx.request({
 
-          // url: `http://localhost:3000/api/v1/stations/${page.data.id}/rentals`,
+          //url: `http://localhost:3000/api/v1/stations/${page.data.id}/rentals`,
 
           url: `http://e-charge.herokuapp.com/api/v1/stations/${page.data.id}/rentals`,
           method: 'POST',
@@ -58,16 +59,16 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-    console.log(options)
-    // loading specific station data from localhost
+    // loading specific station data from api
     const id = options.id
-    console.log(id)
     
     wx.request({
-      //url: `http://localhost:3000/api/v1/stations/${id}`,
+//       url: `http://localhost:3000/api/v1/stations/${id}`,
       url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
       success: function (res) {
+        console.log(res)
         page.setData(res.data);
+        console.log(page.data)
       }
     })
   
