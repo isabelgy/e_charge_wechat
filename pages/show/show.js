@@ -46,13 +46,13 @@ Page({
         // // })
         // console.log(res.result)
         // console.log(page.data.id)
-        
+
         })
       },
-    
-    
-    
-  
+
+
+
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -61,7 +61,7 @@ Page({
     let page = this;
     // loading specific station data from api
     const id = options.id
-    
+
     wx.request({
 //       url: `http://localhost:3000/api/v1/stations/${id}`,
       url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
@@ -77,6 +77,15 @@ Page({
     const id = e.currentTarget.dataset.id;
     wx.navigateTo({
       url: `/pages/edit/edit?id=${id}`,
+    })
+  },
+
+  showHistory: function (e) {
+    console.log(e)
+    let page = this;
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/history/history?id=${id}`,
     })
   },
 
@@ -98,65 +107,66 @@ Page({
     //     console.log(e)
     // }
     // })
+
     wx.openLocation({
       latitude: lat,
       longitude: long,
       scale: 28,
-      address: address 
+      address: address
     })
     // wx.navigateBack({
 
-  
+
     },
-  
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   },
 
-  
+
 })
