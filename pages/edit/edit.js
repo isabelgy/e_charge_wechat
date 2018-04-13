@@ -48,6 +48,7 @@ Page({
       latitude: that.data.latitude,
       image: that.data.image,
       longitude: that.data.longitude,
+      address: that.data.address,
       availability: false
     }
     console.log(newstation)

@@ -5,13 +5,21 @@
 <!-- <import src="/shared/form.wxml"/>
 <template is="form"/> -->
 
-  <view>
+<view>
 
   <text>Station ID {{id}}</text>
 
-<map id="mapID100" class = "mapstyle" scale ='17' latitude="{{lag}}" longitude="{{long}}" markers= "{{markers}}" controls = "{{controls}}" bindcontroltap='controlsEventHandle' show-location/>
- <text>Location: 
-{{addmessage}}
+  <view wx:if="{{image === nil }}" >
+    <image src="/image/charging.jpeg" style=" width: 100%; height: 200px;"/>
+  </view>
+
+  <view wx:else >
+    <image src="{{data.image}}" style=" width: 100%; height: 200px;"/>
+  </view>
+
+
+ <text>
+ Location:{{address}} 
 </text>
  <!-- <button bindtap= 'reportBroken'> Broken </button> 
 <button bindtap= 'wrong'> Wrong Location</button>
