@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: [ 'Charging Device is Broken', 'Station No Longer Exist', 'The QR code Does Not Work', 'Other'],
+    array: ['- Choose a Reason -', 'Charging Device is Broken', 'Station No Longer Exist', 'The QR code Does Not Work', 'Other'],
     index: 0
   },
 
