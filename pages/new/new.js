@@ -15,8 +15,8 @@ Page({
     console.log(new_station)
     console.log(e)
     wx.request({
-      //url: 'http://e-charge.herokuapp.com/api/v1/stations/',
-      url: 'http://localhost:3000/api/v1/stations/',
+      url: 'http://e-charge.herokuapp.com/api/v1/stations/',
+      // url: 'http://localhost:3000/api/v1/stations/',
       method: 'POST',
       data: new_station,
       success: function () {
