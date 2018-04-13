@@ -48,8 +48,14 @@
 <!-- unavailable needs to save somewhere -->
 
 <!-- charge button and scan image -->
-<button data-id="{{id}}" bindtap='scan' class="btn-circle">START CHARGING</button>
+ <button data-id="{{id}}" bindtap='scan' class="btn-circle">START CHARGING</button> 
 <!-- <text class="h2"></text> -->
+<!-- <view class="cell battery__sad">
+  <view class="battery">
+    <view class="face"></view>
+    <view class="acid"></view>
+  </view>
+</view> -->
 
 <!-- link to scanning page -->
 
