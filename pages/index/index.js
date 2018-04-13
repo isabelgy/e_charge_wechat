@@ -83,7 +83,9 @@ Page({
   click: function (e) {
     let page = this;
     const id = e.markerId
-    console.log(e)
+    let show_station = { address: page.data.address, latitude: page.data.latitude, longitude: page.data.longitude }
+   
+    console.log(show_station)
     wx.navigateTo({
       url: `/pages/show/show?id=${id}`,
     })

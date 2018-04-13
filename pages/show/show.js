@@ -66,12 +66,9 @@ Page({
 //       url: `http://localhost:3000/api/v1/stations/${id}`,
       url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
       success: function (res) {
-        console.log(res)
         page.setData(res.data);
-        console.log(page.data)
       }
     })
-  
   },
 
   editStation: function (e) {
@@ -83,6 +80,24 @@ Page({
     })
   },
 
+  showMap: function (e) {
+    console.log(e)
+    const lat = Number(e.currentTarget.dataset.id[0])
+    const long = Number(e.currentTarget.dataset.id[1])
+    const address = e.currentTarget.dataset.id[2]
+    let page = this;
+    wx.openLocation({
+      latitude: lat,
+      longitude: long,
+      scale: 28,
+      address: address 
+    })
+    // wx.navigateBack({
+
+      
+    // })
+    
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
