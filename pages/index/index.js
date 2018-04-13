@@ -80,6 +80,11 @@ Page({
   //     }]
   //   })
   // },
+
+  onPullDownRefresh: function () {
+    wx.stopPullDownRefresh()
+  },
+  
   click: function (e) {
     let page = this;
     const id = e.markerId
