@@ -71,7 +71,11 @@
   color: black;
   font-size: 15px;
   width: 100%;
-  display: 
-  
+ 
+}
+
+.textaddress {
+  font-size: 14px;
+  color: black;
 }
 

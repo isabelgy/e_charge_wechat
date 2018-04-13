@@ -4,8 +4,8 @@
 <!--index.wxml-->
 <view class="container">
   <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="/image/dummy_profile.png" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <image class="userinfo-avatar" src="{{profile.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{profile.nickName}}</text>
   </view>
 </view>
 
@@ -15,7 +15,7 @@
 <view class="rental" bindtap="showrental" wx:for="{{rentals}}" wx:for-item="rental" wx:key="rental.id" data-rental="{{rental}}">
   <view class="card">
    <view class = "text"> {{rental.start}}, {{rental.duration}} min, {{rental.duration / 10}} RMB </view> 
-    <view class = "text"> {{rental.address}} </view>
+    <view class = "textaddress"> {{rental.address}} </view>
   </view>
 </view>
 
