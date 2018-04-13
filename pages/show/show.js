@@ -80,6 +80,15 @@ Page({
     })
   },
 
+  showHistory: function (e) {
+    console.log(e)
+    let page = this;
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/history/history?id=${id}`,
+    })
+  },
+
   showMap: function (e) {
     // console.log(e)
     const lat = Number(e.currentTarget.dataset.id[0])

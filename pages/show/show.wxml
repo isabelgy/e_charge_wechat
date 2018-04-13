@@ -56,7 +56,7 @@
 
 <view class="card">
   <button class="btn-s" bindtap='editStation' data-id= '{{id}}'>Edit</button>
-  <button class="btn-s">History</button>
+  <button class="btn-s" bindtap='showHistory' data-id='{{id}}'>History</button>
 </view>
 <!-- 
 <button bindtap='editStation' data-id= '{{id}}'> Edit

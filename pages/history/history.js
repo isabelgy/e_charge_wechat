@@ -12,7 +12,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let page = this
+    const id = options.id
+    wx.request({
+      url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
+      success: function (res) {
+        page.setData(res.data);
+        console.log(res.data)
+      }
+    })
   },
 
   /**
