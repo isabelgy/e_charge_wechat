@@ -81,11 +81,23 @@ Page({
   },
 
   showMap: function (e) {
-    console.log(e)
+    // console.log(e)
     const lat = Number(e.currentTarget.dataset.id[0])
     const long = Number(e.currentTarget.dataset.id[1])
     const address = e.currentTarget.dataset.id[2]
     let page = this;
+    // wx.getLocation({
+    //   type: 'gcj02',
+    //   sucess: function(res){
+    //     wx.openLocation({
+    //       latitude: lat,
+    //       longitude: long,
+    //       scale: 28,
+    //       address: address
+    //   })
+    //     console.log(e)
+    // }
+    // })
     wx.openLocation({
       latitude: lat,
       longitude: long,
@@ -94,11 +106,9 @@ Page({
     })
     // wx.navigateBack({
 
-      
-    // })
-    
-  },
-
+  
+    },
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
