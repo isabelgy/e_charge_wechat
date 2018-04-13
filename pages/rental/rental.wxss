@@ -18,12 +18,12 @@
   background: #3EFF8B;
   transition: all 0.3s ease;
   height: 80px;
-  padding-left: 38px;
-  /* padding: 0px 30px; */
-  margin-top: 24px; 
+  padding: 30px 60px;
+   /* padding-left: 35px;
+  padding-right: 35px;  */
+  margin-top: 20px; 
   display: flex;
-  align-items: center;
-  color: white;
+  color: black;
   font-size: 30px;
   
 }   
@@ -35,6 +35,8 @@ width: 100px;
 padding:10px;
 white-space: nowrap;
 overflow: visible;
+color: black;
+font-weight: bolder;
 }
 
 .img {
