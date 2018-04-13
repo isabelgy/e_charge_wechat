@@ -7,30 +7,58 @@
 
 <view>
 
-  <text>Station ID {{id}}</text>
 
   <view wx:if="{{image === nil }}" >
-    <image src="/image/charging.jpeg" style=" width: 100%; height: 200px;"/>
+  
+
+    <image src="/image/charging.jpeg" style=" width: 100%; height: 200px;">
+    </image>
+    
   </view>
 
+  
   <view wx:else >
-    <image src="{{data.image}}" style=" width: 100%; height: 200px;"/>
+    <image src="{{data.image}}" style=" width: 100%; height: 200px;">
+    </image>
+
   </view>
 
+ <cover-image class="img" src="/image/take_photo.png"/>
+    
 
- <text>
- Location:{{address}} 
-</text>
+  <view class="card">
+    <view class="card-m">
+      <image src= "/image/id.png" style="width: 30px; height: 30px;"/>
+      <view class="card-category">Station ID</view>
+      <view class="text-s">{{id}}</view>
+    </view> 
+  </view>
+
+<view class="card" bindtap="showMap" data-id='{{[latitude, longitude, address]}}'>
+  <view class="card-m">
+    <image src= "/image/green_marker.png" style="width: 30px; height: 30px;  "></image>
+    <view class="card-category"> Location </view>
+    <view class="text-s">{{address}}</view>
+    </view>
+</view> 
+
  <!-- <button bindtap= 'reportBroken'> Broken </button> 
 <button bindtap= 'wrong'> Wrong Location</button>
  <button bindtap= 'update'> Update Photo </button>
   -->
 
+
 </view>
-<picker mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected">
-    <button>{{array[index]}}</button>
+
+<picker mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected" >
+    <button class="picker">{{array[index]}}</button>
 </picker>
-<button bindtap="bindSubmit" style="margin-bottom:50px " type="primary" form-type="submit">Submit</button>
+
+<!-- <view style="height:10px"></view> -->
+
+<button bindtap="bindSubmit" style="margin-bottom:50px " class="btn2">SUBMIT</button>
+
+<!-- form-type="submit" -->
 
 <!-- <view>
   <view>Report the Problem</view>

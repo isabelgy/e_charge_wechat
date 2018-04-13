@@ -12,9 +12,11 @@
  <button class="btn" bindtap= 'btnChooseEventHandle'><image src="/image/add_button.png" class="img"/><view class="text">{{addmessage}}</view></button>
 <!-- <button bindtap= 'btnOpenEventHandle'> openLocation</button> -->
 <!-- <button bindtap= 'btnCenterEventHandle'> GetCenter</button> --> 
- <button bindtap="bindSubmit" type="primary" form-type="submit" class="submitbtn">Submit</button>
+ <button bindtap="bindSubmit" form-type="submit" class="submitbtn">SUBMIT</button>
 
 </view>
+
+
 
 <!--  -->
 
