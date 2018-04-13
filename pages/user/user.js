@@ -12,7 +12,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    const page = this
+    wx.request({
+      url: `http://e-charge.herokuapp.com/api/v1/users/${wx.getStorageSync('user_id')}`,
+      success: function (res) {
+        page.setData(res.data);
+        console.log(res.data)
+      }
+    })
   },
 
   /**
