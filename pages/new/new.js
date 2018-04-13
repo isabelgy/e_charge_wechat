@@ -11,11 +11,12 @@ Page({
   },
 
   bindSubmit: function (e) {
-    let new_station = { latitude: this.data.lag, longitude: this.data.long}
+    let new_station = {address: this.data.address, latitude: this.data.lag, longitude: this.data.long}
     console.log(new_station)
     console.log(e)
     wx.request({
       url: 'http://e-charge.herokuapp.com/api/v1/stations/',
+      // url: 'http://localhost:3000/api/v1/stations/',
       method: 'POST',
       data: new_station,
       success: function () {
@@ -41,11 +42,12 @@ Page({
           addmessage: res.address,
           lag: res.latitude,
           long: res.longitude,
+          address: res.address,
           markers: [{
             id: 100000,
             latitude: res.latitude,
             longitude: res.longitude,
-            iconPath: '/image/pin.png'
+            iconPath: '/image/green_marker.png'
           }]
         })
       }
@@ -108,13 +110,13 @@ Page({
         console.log(res)
         that.setData({
           addmessage: res.address,
-          lag: res.latitude,
+          lat: res.latitude,
           long: res.longitude,
           markers: [{
             id: 100000,
             latitude: res.latitude,
             longitude: res.longitude,
-            iconPath: '/image/pin.png'
+            iconPath: '/image/green_marker.png'
           }]
         })
       },

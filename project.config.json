@@ -30,7 +30,9 @@
 			"list": []
 		},
 		"miniprogram": {
+
 			"current": 4,
+
 			"list": [
 				{
 					"id": -1,
@@ -55,12 +57,14 @@
 					"name": "Profile page",
 					"pathName": "pages/user/user",
 					"query": ""
+
 				},
 				{
 					"id": -1,
 					"name": "history page",
 					"pathName": "pages/history/history",
 					"query": ""
+
 				}
 			]
 		}

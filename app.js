@@ -11,17 +11,20 @@ App({
     wx.login({
       success: function (res) {
         if (res.code) {
+          console.log(res.code)
           
           //发起网络请求
           wx.request({
-            //url: 'http://localhost:3000/api/v1/users/',
+
+            // url: 'http://localhost:3000/api/v1/users/',
+
             url: 'http://e-charge.herokuapp.com/api/v1/users/',
             method: "POST",
             data: {
               code: res.code
             },
             success: function(res) {
-              // console.log(res.data)
+               console.log(res.data)
               wx.setStorageSync('openid', res.data.openid)
               wx.setStorageSync('user_id', res.data.id)
               // page.globalData,setData({})

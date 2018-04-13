@@ -8,19 +8,38 @@
 <image src="/image/charging.jpeg" style=" width: 100%; height: 200px;"   ></image>
 
 <!-- create a box for the address -->
-<view class="card"> <image style="width: 40px; height: 40px; " src="/image/green_location.jpg"></image><view class = "address"> 129, Yan'an Lu, Shanghai </view></view>
+
+ <view class="card" bindtap="showMap" data-id='{{[latitude, longitude, address]}}'><image src= "/image/green_marker.png" style="width: 30px; height: 30px;  "></image><view class="text">{{address}}</view>
+</view> 
+
+
 
 
 <!--link box to backend  -->
 
 <!-- create box for charging station id and image -->
-<view class="card"><image src= "/image/electric_charger.png" style="width: 30px; height: 30px;  "></image><view class="text">95783</view>
+<view class="card">
+  <view class="card-m">
+  <image src= "/image/id.png" style="width: 30px; height: 30px;"/>
+  <view class="text-s">{{id}}</view>
+  </view>
+
+<!-- box for working status -->
+  <view class="card-s" wx:if="{{availability==true}}" >
+    <image src="/image/available.png" style="width: 30px; height: 30px;"/>
+    <view class="text-m">Available</view>
+  </view>
+
+  <view class="card-s" wx:else >
+    <image src="/image/notavailable.png" style="width: 30px; height: 30px;"/>
+    <view class="text-m">Not Available</view>
+  </view>
 </view>
 
 <!--link box to backend  -->
 
-<!-- box for working status -->
-<view class="card"><image src="/image/green_tick.png" style="width: 30px; height: 30px; "></image><view class= "text">Available</view></view>
+
+
 
 <!--link box to backend  -->
 
@@ -29,7 +48,17 @@
 <!-- unavailable needs to save somewhere -->
 
 <!-- charge button and scan image -->
-<button data-id="{{id}}" bindtap='scan' class="btn-circle">
-<text class="h2">START CHARGING</text></button>
+<button data-id="{{id}}" bindtap='scan' class="btn-circle">START CHARGING</button>
+<!-- <text class="h2"></text> -->
 
 <!-- link to scanning page -->
+
+
+<view class="card">
+  <button class="btn-s" bindtap='editStation' data-id= '{{id}}'>Edit</button>
+  <button class="btn-s">History</button>
+</view>
+<!-- 
+<button bindtap='editStation' data-id= '{{id}}'> Edit
+</button> -->
+
