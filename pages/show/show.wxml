@@ -9,7 +9,7 @@
 
 <!-- create a box for the address -->
 
- <view class="card"><image src= "/image/green_marker.png" style="width: 30px; height: 30px;  "></image><view class="text">{{address}}</view>
+ <view class="card" bindtap="showMap" data-id='{{[latitude, longitude, address]}}'><image src= "/image/green_marker.png" style="width: 30px; height: 30px;  "></image><view class="text">{{address}}</view>
 </view> 
 
 
