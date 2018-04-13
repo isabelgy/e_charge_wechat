@@ -1,0 +1,26 @@
+<!--pages/history/history.wxml-->
+
+<!--profile picture  -->
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="station-image" src="/image/charging.jpeg" style= "background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+</view>
+
+<!-- recent trips needs to get the data of recent trips  -->
+<view class="h3">My Trips</view>
+
+<view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129 Yan'an Lu, Shanghai  </view></view>
+
+<view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129  Yan'an Lu, Shanghai  </view></view>
+
+<view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129 Yan'an Lu, Shanghai  </view></view>
+
+<view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129 Yan'an Lu, Shanghai  </view></view>
+
+<view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129 Yan'an Lu, Shanghai  </view></view>
+
+<view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129 Yan'an Lu, Shanghai  </view></view>
+ 
