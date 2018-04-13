@@ -48,12 +48,20 @@
 <!-- unavailable needs to save somewhere -->
 
 <!-- charge button and scan image -->
+
 <view wx:if="{{availability==true}}">
   <button data-id="{{id}}" bindtap='scan' class="btn-circle">
     START CHARGING
   </button>
 </view>
+
 <!-- <text class="h2"></text> -->
+<!-- <view class="cell battery__sad">
+  <view class="battery">
+    <view class="face"></view>
+    <view class="acid"></view>
+  </view>
+</view> -->
 
 <!-- link to scanning page -->
 
