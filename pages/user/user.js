@@ -13,6 +13,7 @@ Page({
    */
   onLoad: function (options) {
     const page = this
+    this.setData({ profile: (getApp().globalData.userInfo)})
     wx.request({
       url: `http://e-charge.herokuapp.com/api/v1/users/${wx.getStorageSync('user_id')}`,
       success: function (res) {
