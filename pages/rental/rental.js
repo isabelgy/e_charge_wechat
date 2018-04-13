@@ -36,7 +36,7 @@ Page({
 
   timerSet: function (e) {
     this.setData({timer: e.detail.value})
-    // setTimeout(stopCharge, (timer * 60000))
+    setTimeout(this.stopCharge, 5000)
   },
 
   /**

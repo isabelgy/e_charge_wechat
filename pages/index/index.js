@@ -122,6 +122,9 @@ Page({
   //   })
   // },
 
+ 
+  
+  
   onShow: function () {
     let page = this;
     wx.request({
@@ -130,6 +133,7 @@ Page({
       url: "https://e-charge.herokuapp.com/api/v1/stations",
       method: 'GET',
       success(res) {
+        
         const stations = res.data.stations;
         const markers = []
 
@@ -155,4 +159,5 @@ Page({
       }
     })
   },
+  
 })
