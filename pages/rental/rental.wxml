@@ -12,7 +12,7 @@
 
 
 <!-- create box for charging station id and image -->
-<view class="card"><image src= "/image/electric_charger.png" style="width: 30px; height: 30px;  "></image><view class="text">Station ID: {{station_id}}</view>
+<view class="card"><image src= "/image/id.png" style="width: 30px; height: 30px;  "></image><view class="text">Station ID: {{station_id}}</view>
 </view>
 
 <!-- create box for TIMER -->
@@ -122,7 +122,7 @@
 </view>
 </view>
 <view wx:else>
-<text class='time-asking' style='font-size: 12px; margin-left: 43px; color: green;'>Add those minutes! (10 minutes = 1 RMB)</text>
+<text class='time-asking' style='font-size: 12px; margin: 70px 70px; color: black;'>Add those minutes! (10 minutes = 1 RMB)</text>
 <view class="slider-view">
     <slider bindchange="timerSet" step='10' min="10" max="60" show-value/>
   </view>
