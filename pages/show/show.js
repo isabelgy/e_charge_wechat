@@ -19,9 +19,9 @@ Page({
       success: (res) => {
         wx.request({
 
-          // url: `http://localhost:3000/api/v1/stations/${page.data.id}/rentals`,
+          url: `http://localhost:3000/api/v1/stations/${page.data.id}/rentals`,
 
-          url: `http://e-charge.herokuapp.com/api/v1/stations/${page.data.id}/rentals`,
+          // url: `http://e-charge.herokuapp.com/api/v1/stations/${page.data.id}/rentals`,
           method: 'POST',
           data: {user_id: (wx.getStorageSync('user_id')), station_id:   page.data.id},
           success: function (res) {
@@ -64,9 +64,11 @@ Page({
     console.log(id)
     
     wx.request({
-      //url: `http://localhost:3000/api/v1/stations/${id}`,
-      url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
+      url: `http://localhost:3000/api/v1/stations/1`,
+      // url: `http://localhost:3000/api/v1/stations/${id}`,
+      // url: `http://e-charge.herokuapp.com/api/v1/stations/${id}`,
       success: function (res) {
+        console.log(res)
         page.setData(res.data);
       }
     })

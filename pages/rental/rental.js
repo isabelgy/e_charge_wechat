@@ -10,8 +10,10 @@ Page({
   },
 
   stopCharge: function(e) {
+    const page = this
     wx.request({
-      url: `http://e-charge.herokuapp.com/api/v1/stations/${station_id}/rentals/${id}`,
+      url: `http://localhost:3000/api/v1/stations/${page.data.station_id}/rentals/${page.data.id}`,
+      // url: `http://e-charge.herokuapp.com/api/v1/stations/${station_id}/rentals/${id}`,
       method: 'PUT',
       data: {
         in_progress: false
@@ -33,7 +35,7 @@ Page({
 
   timerSet: function (e) {
     this.setData({timer: e.detail.value})
-    setTimeout(stopCharge, (timer * 60000))
+    // setTimeout(stopCharge, (timer*60000))
   },
 
   /**
@@ -46,8 +48,8 @@ Page({
     const page = this
     wx.request({
 
-      // url: `http://localhost:3000/api/v1/stations/${station_id}/rentals/${id}`,
-      url: `http://e-charge.herokuapp.com/api/v1/stations/${station_id}/rentals/${id}`,
+      url: `http://localhost:3000/api/v1/stations/${station_id}/rentals/${id}`,
+      // url: `http://e-charge.herokuapp.com/api/v1/stations/${station_id}/rentals/${id}`,
 
       success: function (res) {
         
