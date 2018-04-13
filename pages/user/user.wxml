@@ -12,7 +12,14 @@
 <!-- recent trips needs to get the data of recent trips  -->
 <view class="h3">My Trips</view>
 
-<view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129 Yan'an Lu, Shanghai  </view></view>
+<view class="rental" bindtap="showrental" wx:for="{{rentals}}" wx:for-item="rental" wx:key="rental.id" data-rental="{{rental}}">
+  <view class="card">
+   <view class = "text"> {{rental.start}}, {{rental.duration}} min, {{rental.duration / 10}} RMB </view> 
+    <view class = "text"> {{rental.address}} </view>
+  </view>
+</view>
+
+<!-- <view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129 Yan'an Lu, Shanghai  </view></view>
 
 <view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129  Yan'an Lu, Shanghai  </view></view>
 
@@ -22,5 +29,5 @@
 
 <view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129 Yan'an Lu, Shanghai  </view></view>
 
-<view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129 Yan'an Lu, Shanghai  </view></view>
+<view class="card"> <view class = "text"> 14/04/2018, 15mins, RMB 10 </view> <view class = "text"> 129 Yan'an Lu, Shanghai  </view></view> -->
  
