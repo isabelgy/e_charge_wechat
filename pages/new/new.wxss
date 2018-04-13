@@ -1,5 +1,47 @@
 /* pages/new/new.wxss */
 .mapstyle{
   width: 750rpx;
-  height: 780rpx;
+  height: 800rpx;
 }
+
+.img {
+  width: 20px;
+  height: 20px;
+  margin: 10px auto;
+  /* position: relative; */
+}
+
+.btn {
+ color: black; 
+ height:70px;
+ background: white;
+ border: 1px thin #BDBDBD;
+ vertical-align: middle;
+ padding: 12px 8px 5px 10px;
+ position: relative;
+}
+
+.text {
+  display: inline;
+
+}
+
+.submitbtn{
+  width: 200px;
+  height: 45px;
+  background: #38EC80;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 25%;
+  margin-right: 30%;
+}
+
+.img {
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  left:20px;
+  top:50%;
+  margin-top:-11px;
+}
+

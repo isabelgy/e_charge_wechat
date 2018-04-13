@@ -5,15 +5,17 @@
   <view>
 
 <map id="mapID100" class = "mapstyle" scale ='17' latitude="{{lag}}" longitude="{{long}}" markers= "{{markers}}" controls = "{{controls}}" bindcontroltap='controlsEventHandle' show-location/>
- <text>Location: 
+ <!-- <text> Location: 
 {{addmessage}}
-</text>
+</text> -->
 <!-- <button bindtap= 'btnGetEventHandle'> getLocation</button> -->
-<button bindtap= 'btnChooseEventHandle'>Edit Location</button>
+ <button class="btn" bindtap= 'btnChooseEventHandle'><image src="/image/add_button.png" class="img"/><view class="text">{{addmessage}}</view></button>
 <!-- <button bindtap= 'btnOpenEventHandle'> openLocation</button> -->
-<!-- <button bindtap= 'btnCenterEventHandle'> GetCenter</button> -->
- <button bindtap="bindSubmit" style="margin-bottom:50px " type="primary" form-type="submit">Submit</button>
+<!-- <button bindtap= 'btnCenterEventHandle'> GetCenter</button> --> 
+ <button bindtap="bindSubmit" type="primary" form-type="submit" class="submitbtn">Submit</button>
 
 </view>
+
+<!--  -->
 
        
