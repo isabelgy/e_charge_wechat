@@ -49,7 +49,9 @@
 
 <!-- charge button and scan image -->
 <view wx:if="{{availability==true}}">
-<button data-id="{{id}}" bindtap='scan' class="btn-circle">START CHARGING</button>
+  <button data-id="{{id}}" bindtap='scan' class="btn-circle">
+    START CHARGING
+  </button>
 </view>
 <!-- <text class="h2"></text> -->
 
